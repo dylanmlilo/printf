@@ -55,6 +55,16 @@ int _printf(const char *format, ...)
                         len += print_dec(d);
                         break;
 
+                    case 'u':
+                        d = va_arg(args, int);
+                        len += print_dec(d);
+                        break;
+
+                    case 'x':
+                        d = va_arg(args, int);
+                        len += print_dec(d);
+                        break;
+
                     default:
                         j++;
                         continue;
